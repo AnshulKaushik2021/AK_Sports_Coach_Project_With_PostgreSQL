@@ -1,0 +1,40 @@
+<html style="background-color:#00BBFF">
+
+<div>
+  <mat-form-field>
+    <mat-select  [(ngModel)]="playerID" [ngModelOptions]="{standalone: true}" (selectionChange)="changeParams()">
+      <mat-option style="background-color:#000000;color:white" *ngFor="let _ of [].constructor(31); let i = index" [value]="i + 1">{{ i + 1}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<h1 align="center" style = "text-decoration:underline;background-color:#0077FF; padding:20px;border-width:2px; border-style:solid; border-color:#000000;font-size:60px">{{namey}}</h1>
+<h1 align="center" style = "background-color:#00AAFF;padding:20px;border-width:2px; border-style:solid; border-color:#000000;font-size:40px">Per Game Statline</h1>
+<h2 align="center" style = "font-size:24px">{{scavg}} points, {{rebsum}} rebounds ({{offrebavg}} offensive),
+  {{assistavg}} assists, {{stlavg}} steals, {{blkavg}} blocks, {{ofoul + dfoul}} fouls ({{ofoul}} offensive), and {{toavg}} turnovers in {{min}} minutes.</h2>
+  <h2 align="center" style = "font-size:24px">Started {{gamesstarted}} games out of {{totalgames}} games played</h2>
+     
+  
+  
+  <h3 align="center" style = "background-color:#00AAFF;padding:20px;border-width:2px; border-style:solid; border-color:#000000;font-size:40px">Efficiency</h3>
+  <h1 align="center">{{fieldmessage}}</h1>
+  <h1 align="center">{{treemessage}}</h1>
+  <h1 align="center">{{freemessage}}</h1>
+  <h1 align="center">{{truemessage}}</h1>
+  
+  <h1 align="center" style = "background-color:#00AAFF;padding:20px;border-width:2px; border-style:solid; border-color:#000000;font-size:40px">Shooting % By Zone</h1>
+  <h1 align="center">
+
+    {{dunkmessage}}
+
+    
+  </h1>
+  <h1 align="center">{{paintmessage}}</h1>
+  <h1 align="center">{{midmessage}}</h1>
+  <h1 align="center">{{threemessage}}</h1>
+
+  <h3 align="center" style = "background-color:#00AAFF;padding:20px;border-width:2px; border-style:solid; border-color:#000000;font-size:40px">Games and Shots List</h3>
+    
+  
+  <body id = "bd" style="background-color:#0099EE">
+  </body>
+</html>
